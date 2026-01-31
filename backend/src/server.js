@@ -18,7 +18,6 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/uploads", express.static("src/uploads"));
 
-console.log('working')
 
 mongoose
   .connect(process.env.MONGO_URI)

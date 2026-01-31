@@ -10,6 +10,7 @@ import { sendOTP } from "../utils/sendOTP.js";
 
 export const register = async (req, res) => {
   try {
+    console.log('working')
     const { name, email, password } = req.body;
 
     // If user already exists (verified user)
