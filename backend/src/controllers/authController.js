@@ -34,18 +34,18 @@ export const register = async (req, res) => {
       expiresAt: Date.now() + 10 * 60 * 1000,
     });
 
-    console.log("otp:", otp);
-    try {
-      await sendOTP(email, otp);
-      console.log("OTP email sent");
-    } catch (emailError) {
-      console.error("EMAIL FAILED:", emailError);
-      return res.status(500).json({
-        message: "Failed to send OTP email",
-      });
-    }
+    // console.log("otp:", otp);
+    // try {
+    //   await sendOTP(email, otp);
+    //   console.log("OTP email sent");
+    // } catch (emailError) {
+    //   console.error("EMAIL FAILED:", emailError);
+    //   return res.status(500).json({
+    //     message: "Failed to send OTP email",
+    //   });
+    // }
 
-    res.status(201).json({ message: "OTP sent to email" });
+    // res.status(201).json({ message: "OTP sent to email" });
   } catch (err) {
     res.status(500).json({ message: "Registration failed" });
   }
